@@ -99,10 +99,29 @@ runners.reduce((acc, item) => {
 
 
 // ==== Challenge 5: Be Creative ====
-// Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
+// Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  
+// Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
-// Problem 1
+// Problem 1: Need to find the company names
+let companyName = []
 
-// Problem 2
+runners.forEach(function(items) {
+    companyName.push(`${items.company_name}`);
+}
+);
+console.log(companyName);
 
-// Problem 3
+// Problem 2 Need the company names from the previous function to be printed in alphabetical order
+
+let companySort = companyName.sort();
+console.log(companySort); 
+
+// Problem 3 Need the first and Last name to match up with there emails
+
+let contactInfo = [];
+
+runners.forEach(function(items) {
+    contactInfo.push(`${items.first_name} ${items.last_name}: ${items.email}`);
+}
+);
+console.log(contactInfo);
