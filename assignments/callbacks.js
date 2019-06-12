@@ -1,7 +1,7 @@
 // Create a higher order function and invoke the callback function to test your work. You have been provided an example of a problem and a solution to see how this works with our items array. 
 //  Study both the problem and the solution to figure out the rest of the problems.
 
-const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
+const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum' , 'yo-yo'];
 
 /* 
 
@@ -31,7 +31,16 @@ const items = ['Pencil', 'Notebook', 'yo-yo', 'Gum'];
     console.log(first)
   });
 
+  // Anonymous Function Solution:
+// function firstItem(arr, cb) {
+//   cb(arr[0]);
+// }
+// firstItem(items, function(first) {
+//   console.log(first);
+// });
+
 */
+// The below function will be used in all the problems bellow to show the results of the functions I create
 function showResult(result) {
   console.log('result:', result)
 }
@@ -70,7 +79,7 @@ function multiplyNums(x, y, cb) {
   return  cb(x * y);
 }
 
-sumNums(30, 10, showResult);
+multiplyNums(30, 10, showResult);
 
 
 function contains(item, list, cb) {
@@ -84,7 +93,7 @@ contains('turd', items, showResult);
 
 
 /* STRETCH PROBLEM */
-
+// Went to this site for help: https://medium.com/dailyjs/how-to-remove-array-duplicates-in-es6-5daa8789641c
 function removeDuplicates(array, cb) {
   // removeDuplicates removes all duplicate values from the given array.
   // Pass the duplicate free array to the callback function.
